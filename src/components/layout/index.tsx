@@ -1,11 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { LEGALDOCUMENT } from 'const'
-
 import Header from './Header'
 import Footer from './Footer'
-import LegalBanner from '../LegalBanner'
+import AppBanner from '../AppBanner'
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -27,7 +25,7 @@ const Wrapper = styled.div`
 
 const Layout: React.FC = ({ children }) => (
   <Wrapper>
-    <LegalBanner startOpen={false} title={LEGALDOCUMENT.TITLE} />
+    <AppBanner startOpen={false} title={'Hi this is a banner'} />
     <Header />
     <main>{children}</main>
     <Footer />

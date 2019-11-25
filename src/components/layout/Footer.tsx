@@ -40,13 +40,13 @@ const Footer: React.FC = () => (
   <Wrapper>
     <ul>
       <li>
-        <Link to="/about">About dFusion</Link>
+        <Link to="/about">About Example App</Link>
       </li>
       <li>
-        <Link to="/source-code">Source code</Link>
+        <Link to="/source-code">Some other link</Link>
       </li>
     </ul>
-    <div className="version">dFusion PoC v{VERSION}</div>
+    <div className="version">App Version: {VERSION}</div>
   </Wrapper>
 )
 

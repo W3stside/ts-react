@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import HtmlWebPackPlugin from 'html-webpack-plugin'
 import webpack from 'webpack'
 import DashboardPlugin from 'webpack-dashboard/plugin'

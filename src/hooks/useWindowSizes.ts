@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react'
 
+/* WHAT IS THIS? */
+// useWindowSizes deals with window.innerWidth and .innerHeight and returns sizes
+// Useful for dealing with responsive design changes that are difficult in pure CSS
+
 interface WindowSizes {
   innerWidth?: number
   innerHeight?: number

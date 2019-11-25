@@ -1,5 +1,9 @@
 import { Dispatch, SetStateAction, useState, useEffect, useCallback } from 'react'
 
+/* WHAT IS THIS? */
+// useSafeState is a useState implemtation that checks for mount status
+// and doesn't setState if component calling state change isn't mounted
+
 interface UseSafeState {
   <S = undefined>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>]
 }

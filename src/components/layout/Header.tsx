@@ -1,10 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router'
-import { rem } from 'polished'
 
-import Wallet, { WalletWrapper } from 'components/Wallet'
+import styled from 'styled-components'
+import { rem } from 'polished'
 
 const Wrapper = styled.header`
   color: #ffffff;
@@ -23,7 +22,7 @@ const Wrapper = styled.header`
 
   .nav-links {
     display: flex;
-    flex: 1;
+    flex: 3;
     justify-content: center;
     padding: 0;
     list-style-type: none;
@@ -41,7 +40,7 @@ const Wrapper = styled.header`
   }
 
   .logo {
-    flex: 0 1 16rem;
+    flex: 1;
     border: 2px solid #ff5097;
     color: #ff5097;
     text-align: center;
@@ -78,20 +77,8 @@ const Wrapper = styled.header`
   @media only screen and (max-width: 500px) {
     .logo,
     .nav-links,
-    ${WalletWrapper} {
-      padding: 0.25rem;
-    }
-
     .nav-links {
       margin: 0 auto;
-    }
-
-    ${WalletWrapper} {
-      font-size: 80%;
-      order: 3;
-      &::last-child {
-        border-top: 0.7px solid #00000029 !important;
-      }
     }
 
     .header-title {
@@ -115,21 +102,20 @@ const Header: React.FC = () => {
     <Wrapper>
       <nav>
         <Link className="logo" to="/">
-          dFusion PoC
+          App Logo and Link
         </Link>
         <ul className="nav-links">
           <li>
-            <Link to={from.pathname}>Trade</Link>
+            <Link to={from.pathname}>Somewhere 1</Link>
           </li>
           <li>
-            <Link to={{ pathname: '/deposit', state: { from: location } }}>Deposit</Link>
+            <Link to={{ pathname: '/', state: { from: location } }}>Somewhere 2</Link>
           </li>
         </ul>
-        <Wallet />
       </nav>
       <div className="header-title">
-        <h1>Swap stable coins</h1>
-        <h3>Fair, Efficient prices, Onchain</h3>
+        <h1>Example App</h1>
+        <h3>Subtitle</h3>
       </div>
     </Wrapper>
   )
